@@ -7,14 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!----Cabeçalho----> 
-    Cabeçalho<br>
-    <!---Pagina--->
-    <?php
-        $this->CarregarViewNoTemplate($nomeView,$dadosModel);
-    ?>
-    <!---FimPagina--->
-    <br>Rodapé<br>
-    <!----Rodapé----> 
+    Pagina de noticias
 </body>
 </html>
