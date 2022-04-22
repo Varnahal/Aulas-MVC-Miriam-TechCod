@@ -29,6 +29,10 @@ class Core{
            {
                 $parametros = $url_array;
            }
+           else
+           {
+            $parametros = 0;
+           }
         }
         else//caso a url esteja assim: www.site.com/
         {
@@ -42,8 +46,7 @@ class Core{
             $metodo = 'index';
         }
         $c = new $controller;
-        $parametros = array('');
-        call_user_func(array($c,$metodo),$parametros);
+        call_user_func_array(array($c,$metodo),array($parametros));
 
     }
 }

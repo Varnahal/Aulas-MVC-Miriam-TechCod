@@ -1,23 +1,25 @@
 <?php
 class Conexao{
-    private static $conn;
-
-    private function __construct()
-    {
-        
-    }
+    private static $instancia;
+    
     public static function getConexao()
     {
-        $dbname = 'Varnahal';
-        $user = 'root';
-        $pass = '';
-        $host = 'localhost';
-        try {
-            self::$conn = new PDO("mysql:dbname=$dbname;host=$host",$user,$pass);
-        } catch (Exception $e) {
-            echo $e ;
+        if(!isset(self::$instancia))
+        {
+            $dbname = 'varnahal';
+            $user = 'root';
+            $pass = '';
+            $host = 'localhost';
+            try 
+            {
+                self::$instancia = new PDO("mysql:dbname=$dbname;host=$host",$user,$pass);
+            } 
+            catch (Exception $e)
+            {
+                echo $e ;
+            }
+            return self::$instancia;
         }
-        return self::$conn;
     }
 
 }
