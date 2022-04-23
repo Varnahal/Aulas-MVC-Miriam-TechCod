@@ -16,8 +16,8 @@
     <?php
 echo '<h1>'.$titulo.'</h1><br>';
 echo $texto;
-echo'<img src="midia/'.$nome_imagem.'" alt="">';
+echo'<img src="midia/'.$nome_imagem.'" alt="">'; //por algum motivo não está funcionando a imagem, mas tenho certeza de que está tudo correto
 ?>
-<img src="midia/img2.png" alt="">
+<img src="midia/img2.png" alt=""> 
 </body>
 </html>
